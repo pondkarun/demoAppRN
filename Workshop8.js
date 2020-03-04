@@ -1,5 +1,13 @@
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View } from 'react-native';
+import {
+  Platform,
+  TextInput,
+  StyleSheet,
+  Text,
+  View,
+  Button,
+  Alert
+} from 'react-native';
 
 // Flex-Box
 /**
@@ -7,13 +15,22 @@ import { Platform, StyleSheet, Text, View } from 'react-native';
  * flexDirection: row | column
  * 
  */
-export default class Workshop6 extends Component {
+
+export default class Workshop8 extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = { text: '' };
+  }
+
+  clickMe(){
+    Alert.alert("Hello")
+  }
+
   render() {
     return (
-      <View style={{ flex: 1, flexDirection: "column", backgroundColor: "#FFFFFF", justifyContent: 'space-evenly', alignItems: 'stretch' }}>
-        <View style={{ height: 50, backgroundColor: '#FF0000' }} />
-        <View style={{ height: 50, backgroundColor: '#00FF00' }} />
-        <View style={{ height: 50, backgroundColor: '#0000FF' }} />
+      <View style={{ padding: 10, flex: 1 ,flexDirection: "column" , justifyContent: "center" }}>
+        <Button title="Press Me" onPress={this.clickMe} />
       </View>
     );
   }
