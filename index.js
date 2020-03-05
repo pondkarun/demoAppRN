@@ -17,7 +17,8 @@ import { AppRegistry } from 'react-native';
 // import App from './Workshop12';
 // import App from './Workshop13';
 // import App from './Workshop14';
-import App from './Workshop15';
+// import App from './Workshop15';
+import App from './Workshop16';
 import { name as appName } from './app.json';
 
 AppRegistry.registerComponent(appName, () => App);
